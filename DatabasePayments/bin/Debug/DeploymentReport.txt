@@ -1,0 +1,20 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Payments]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Payments].[FUNDS_MOP] is being dropped, data loss could occur.
+       The column [dbo].[Payments].[FUNDS_ORIG_AMT] is being dropped, data loss could occur.
+
+** User actions
+     Table rebuild
+       [dbo].[Payments] (Table)
+
+** Supporting actions
+
+The column [dbo].[Payments].[FUNDS_MOP] is being dropped, data loss could occur.
+The column [dbo].[Payments].[FUNDS_ORIG_AMT] is being dropped, data loss could occur.
+

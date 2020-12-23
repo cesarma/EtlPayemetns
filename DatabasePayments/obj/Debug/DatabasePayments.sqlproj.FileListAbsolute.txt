@@ -1,0 +1,5 @@
+C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\bin\Debug\DatabasePayments.dacpac
+C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\bin\Debug\DatabasePayments.dll
+C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\bin\Debug\DatabasePayments.pdb
+C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\obj\Debug\DatabasePayments.dll
+C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\obj\Debug\DatabasePayments.pdb

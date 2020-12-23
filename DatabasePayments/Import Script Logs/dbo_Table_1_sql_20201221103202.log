@@ -1,0 +1,13 @@
+12/21/2020 5:32:02 PM	This log contains information about the import operation of the script 'dbo.Table_1.sql' into project 'DatabasePayments' on computer 'IOIS063X502230S' by user'x502230.
+12/21/2020 5:32:02 PM	Started importing file: C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\query\dbo.Table_1.sql 
+12/21/2020 5:32:02 PM	File name C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\query\dbo.Table_1.sql (size: 546)
+12/21/2020 5:32:02 PM	Parsing import script
+12/21/2020 5:32:02 PM	Total number of batches in script: 3
+12/21/2020 5:32:02 PM	Total number of statements in script: 1
+12/21/2020 5:32:02 PM	The script was successfully imported into the project.
+12/21/2020 5:32:02 PM	Analyzing schema objects...
+12/21/2020 5:32:02 PM	Scanning project for duplicate elements
+12/21/2020 5:32:02 PM	Finished duplicate element processing
+12/21/2020 5:32:03 PM	In the script that you provided to the import operation, one or more statements were not fully understood. These statements were moved to the ScriptsIgnoredOnImport.sql file. Review the file contents for additional information.
+12/21/2020 5:32:03 PM	A summary of the import was saved to the following location: C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\Import Script Logs\dbo_Table_1_sql_20201221103202.log
+12/21/2020 5:32:03 PM	Click Finish to continue...
