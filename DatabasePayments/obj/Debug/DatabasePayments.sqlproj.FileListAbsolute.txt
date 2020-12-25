@@ -3,3 +3,7 @@ C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\bin\Debug\Da
 C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\bin\Debug\DatabasePayments.pdb
 C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\obj\Debug\DatabasePayments.dll
 C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\obj\Debug\DatabasePayments.pdb
+C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\obj\Debug\Model.xml
+C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\obj\Debug\refactor.xml
+C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\obj\Debug\postdeploy.sql
+C:\workspace\RReporter\payments\ETLPaymentsProcess\DatabasePayments\obj\Debug\predeploy.sql
