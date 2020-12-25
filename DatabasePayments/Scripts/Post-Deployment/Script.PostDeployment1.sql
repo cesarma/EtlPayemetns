@@ -13,3 +13,4 @@ Post-Deployment Script Template
 --:r .\Reporter\payments\ETLPaymentsProcess\DatabasePayments\dbo\Tables\Payments.sql
 :r .\Payments.sql
 :r .\PaymentsExhange.sql
+:r .\GetPaymentsbyBranchandDay.sql
