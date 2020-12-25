@@ -64,10 +64,9 @@
     <Folder Include="Scripts\Post-Deployment" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
-    <None Include="Scripts\DatabasePayments.publish.sql" />
     <None Include="query\SQLQuery1.sql" />
     <None Include="DatabasePayments.publish.xml" />
+    <None Include="Scripts\Post-Deployment\GetPaymentsbyBranchandDay.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment1.sql" />
