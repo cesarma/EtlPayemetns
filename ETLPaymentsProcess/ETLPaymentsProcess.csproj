@@ -87,16 +87,20 @@
   <ItemGroup>
     <Compile Include="Models\EgiftInfo.cs" />
     <Compile Include="Models\Exchangerate.cs" />
+    <Compile Include="Models\PaymentsFRY15.cs" />
     <Compile Include="Operations\EgiftInfoInsert.cs" />
     <Compile Include="Operations\ExchangeRateInfoInsert.cs" />
     <Compile Include="Operations\FlatFileRead.cs" />
     <Compile Include="Operations\FlatFileWrite.cs" />
+    <Compile Include="Operations\PutData.cs" />
+    <Compile Include="Operations\ReadBuildInfosConvention.cs" />
     <Compile Include="Operations\TransformBlankStringToNull.cs" />
     <Compile Include="Operations\TransformCustomerInfo.cs" />
     <Compile Include="Operations\TransformDealInfo.cs" />
     <Compile Include="Pipelines\ExchangeRateInfoProcess.cs" />
     <Compile Include="Pipelines\EgiftInfoProcess.cs" />
     <Compile Include="Pipelines\NamedEtlProcess.cs" />
+    <Compile Include="Pipelines\RunBuildInfosProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using FileHelpers;
-
+﻿using FileHelpers;
+using System;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace ETLPaymentsProcess.Models
 {
@@ -38,9 +34,24 @@ namespace ETLPaymentsProcess.Models
 
     public class MoneyConverter : ConverterBase
     {
+
+        private static Regex r = new Regex(@"[+-]?\d(\.\d+)?[Ee][+-]?\d+",
+                                   RegexOptions.Compiled);
+
+        public static bool isScientificNotationNumericRegEx(string str)
+        {
+            str = str.Trim();
+            Match m = r.Match(str);
+            return m.Success;
+        }
+
         public override object StringToField(string from)
         {
-            return Convert.ToDecimal(Decimal.Parse(from) / 100);
+            if (isScientificNotationNumericRegEx(from))
+            {
+                return decimal.Parse(from, NumberStyles.Number | NumberStyles.AllowExponent);
+            }
+            return Convert.ToDecimal(Decimal.Parse(from));
         }
 
         public override string FieldToString(object fieldValue)
