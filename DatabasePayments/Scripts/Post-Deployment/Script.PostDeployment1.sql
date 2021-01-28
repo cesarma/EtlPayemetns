@@ -14,3 +14,5 @@ Post-Deployment Script Template
 :r .\Payments.sql
 :r .\PaymentsExhange.sql
 :r .\GetPaymentsbyBranchandDay.sql
+:r .\AddPayments.sql
+:r .\AddPaymentsExchange.sql

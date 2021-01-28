@@ -9,9 +9,10 @@ CREATE TABLE [dbo].[PaymentsExhange] (
     [Id]             BIGINT     Identity(1,1)           NOT NULL,
 	[Country]            VARCHAR(50) NULL,
 	[Origin]            varchar(50) NULL,
-    [ftxousd]            DECIMAL (28, 20) NULL,
-    [fxtoeur]            DECIMAL (28, 20) NULL,
+    [ftxousd]            DECIMAL (28, 18) NULL,
+    [fxtoeur]            DECIMAL (28, 18) NULL,
     [AsofDate]           DATETIME         NULL,
+	[Comments]           varchar(150)         NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
-GO
+GO 

@@ -33,24 +33,22 @@ AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
-	SET NOCOUNT ON;
+SET NOCOUNT ON;
 
-    -- Select statements for procedure here	
-	--add Risk to the quey 
---input  Branch ESp,NY, MI , asofdate for payemntexchange , asofdate for payments or egift load file
 
-SELECT 'FRY15' as ReportID, BoxId, 'NYB' as BranchID, SUM( ((Funds_ORIG_AMT/1) * (1/ftxousd)))  as Amount,
-'outgoing payments' as GL,    AsofDate as StartDate,AsofDate as EndDate , [Description] as Comments --, FUN 
-FROM [RR61].[dbo].[Payments]  as Payments inner join 
-(
-select Country, Origin, ftxousd from [RR61].[dbo].[PaymentsExhange]   where AsofDate = @AsOfDateEgiftperDay
-and Country =  @Branch
-) as PaymentsEX on Payments.FUN = PaymentsEX.Origin  inner join (
+
+select 'FRY15' as ReportID, Risk.BoxId,  'NYB' as BranchID, PaymentsExchnge.Amount,'outgoing payments' as GL, '10/01/2019' as StartDate,  '10/10/2019' as EndDate,  Risk.Description as Comments 
+from (
+Select Payments.FUN, sum((ExchangeRate.ExRate * Payments.FUNDS_ORIG_AMT)) as Amount  from (
+select IRN, FUN, FUNDS_ORIG_AMT, FUNDS_MOP, AsofDate from RR61.dbo.Payments where AsofDate between '10/01/2019' and '10/10/2019' ) as Payments inner join
+(select avg(ftxousd) as ExRate, Origin from RR61.dbo.PaymentsExhange  where Country = 'NY' and AsofDate between '11/16/2020' and '11/20/2020'  group by Origin) as ExchangeRate on Payments.FUN = ExchangeRate.Origin
+Group by Payments.FUN ) as PaymentsExchnge inner join (
 select DISTINCT BoxId,SUBSTRING([Description],Charindex('(',[Description])+1,3) as Country, [Description] from  [RR61].dbo.vBoxDetails where  BoxId in ('RISKM377','RISKM378','RISKM379','RISKM380','RISKM381','RISKM382','RISKM383','RISKM384','RISKM385','RISKM386','RISKY835','RISKM387','RISKM388','RISKY836','RISKY837','RISKM389','RISKM436','RISKKW46','RISKKW48','RISKKW50','RISKKW52')
 and [Description] like  '%[\((*?)\)]%'
-) as Risk on Payments.FUN = Risk.Country where Payments.[AsofDate] =  @AsOfDatePaymentExchangeperDay
-Group by FUN , BoxId,[Description],AsofDate Order by FUN desc
-
+)as Risk on PaymentsExchnge.FUN = Risk.Country Where Risk.Description != 'Mexican pesos (MXN)'
+UNION 
+select 'FRY15' as ReportID, BoxId,  'NYB' as BranchID, 0 as Amount, '' as GL,  '10/01/2019' as StartDate,  '10/10/2019' as EndDate , [Description] as Comments from  [RR61].dbo.vBoxDetails where  BoxId in ('RISKM436','RISKKW46','RISKKW48','RISKKW50','RISKKW52')
+Order by Amount desc
 
 END
 GO
