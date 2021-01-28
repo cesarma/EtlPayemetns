@@ -1,8 +1,10 @@
 ﻿using ETLPaymentsProcess.Models;
 using ETLPaymentsProcess.Operations;
+using FileHelpers;
 
 namespace ETLPaymentsProcess.Pipelines
 {
+    [IgnoreEmptyLines()]
     class EgiftInfoProcess:NamedEtlProcess
     {
 

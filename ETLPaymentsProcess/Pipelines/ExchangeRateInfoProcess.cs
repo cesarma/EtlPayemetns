@@ -26,7 +26,7 @@ namespace ETLPaymentsProcess.Pipelines
         protected override void Initialize()
         {
             Register(new FlatFileRead<Exchangerate>(Properties.Settings.Default.ExchangeRateInfoFilePath));
-            Register(new TransformBlankStringToNull()); 
+           // Register(new TransformBlankStringToNull()); 
             //Register(new TransformDealInfo());         truncate data and inser new values
             Register(new ExchangeRateInfoInsert());
             

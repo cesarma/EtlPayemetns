@@ -12,7 +12,7 @@ namespace ETLPaymentsProcess.Pipelines
 
         protected override void Initialize()
         {
-            var csString = new ConnectionStringSettings("myConnection2", Properties.Settings.Default.CIFDbConn            ,
+            var csString = new ConnectionStringSettings("GetPaymentsConvertion", Properties.Settings.Default.CIFDbConn            ,
              "System.Data.SqlClient");
 
             Register(new ReadBuildInfosConvention(csString));
@@ -22,6 +22,7 @@ namespace ETLPaymentsProcess.Pipelines
 
             Register(new PutData());
             Register(new FlatFileWrite<PaymentsFRY15>(Properties.Settings.Default.PaymentInfoFilePath));
+           
 
         }
     }
