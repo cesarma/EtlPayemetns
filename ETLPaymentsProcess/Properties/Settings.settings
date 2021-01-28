@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ETLPaymentsProcess.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="EgiftInfoFilePath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\workspace\Corporate\payments\payments.txt</Value>
-    </Setting>
     <Setting Name="CIFDbConn" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -19,23 +16,26 @@
     <Setting Name="EmailFrom" Type="System.String" Scope="Application">
       <Value Profile="(Default)">cesar.martinez@external.santander.us</Value>
     </Setting>
-    <Setting Name="EmailTo" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">cesar.martinez@external.santander.us</Value>
-    </Setting>
-    <Setting Name="EmailSuccSub" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Confirming Payments and Exchage Rates Audit Files Loaded Successfully. </Value>
-    </Setting>
-    <Setting Name="EmailFailedSub" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Confirming Payments and Exchage Rates Loading Process Completed With Error. </Value>
-    </Setting>
     <Setting Name="LogFolder" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\tmp\</Value>
     </Setting>
-    <Setting Name="ExchangeRateInfoFilePath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\workspace\Corporate\payments\cd_sensibilidades.normalized_fx_20201120.csv</Value>
-    </Setting>
     <Setting Name="PaymentInfoFilePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\workspace\Corporate\payments\paymentsresult.txt</Value>
+    </Setting>
+    <Setting Name="EmailTo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">cesar.martinez@external.santander.us;yessica.ocampo@external.santander.us</Value>
+    </Setting>
+    <Setting Name="EmailSuccSub" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CConfirming Payment Files and Exchage Rates  Files Loaded Successfully. </Value>
+    </Setting>
+    <Setting Name="EmailFailedSub" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Confirming Payment Files  and Exchage Rates Loading Process Completed With Error. </Value>
+    </Setting>
+    <Setting Name="EgiftInfoFilePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\workspace\Corporate\payments\PaymentsATOct2019toSep2020.txt</Value>
+    </Setting>
+    <Setting Name="ExchangeRateInfoFilePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\workspace\Corporate\payments\ExchangePaymentsATOct2019toSep2020.txt</Value>
     </Setting>
   </Settings>
 </SettingsFile>

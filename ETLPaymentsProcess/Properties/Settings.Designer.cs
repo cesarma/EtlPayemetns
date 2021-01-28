@@ -25,15 +25,6 @@ namespace ETLPaymentsProcess.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\workspace\\Corporate\\payments\\payments.txt")]
-        public string EgiftInfoFilePath {
-            get {
-                return ((string)(this["EgiftInfoFilePath"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=GBMNYREGD01.NGL.CORP;Initial Catalog=RR61;Integrated Security=True")]
         public string CIFDbConn {
@@ -62,33 +53,6 @@ namespace ETLPaymentsProcess.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("cesar.martinez@external.santander.us")]
-        public string EmailTo {
-            get {
-                return ((string)(this["EmailTo"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Confirming Payments and Exchage Rates Audit Files Loaded Successfully. ")]
-        public string EmailSuccSub {
-            get {
-                return ((string)(this["EmailSuccSub"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Confirming Payments and Exchage Rates Loading Process Completed With Error. ")]
-        public string EmailFailedSub {
-            get {
-                return ((string)(this["EmailFailedSub"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\tmp\\")]
         public string LogFolder {
             get {
@@ -98,19 +62,56 @@ namespace ETLPaymentsProcess.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\workspace\\Corporate\\payments\\cd_sensibilidades.normalized_fx_20201120.csv")]
-        public string ExchangeRateInfoFilePath {
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\workspace\\Corporate\\payments\\paymentsresult.txt")]
+        public string PaymentInfoFilePath {
             get {
-                return ((string)(this["ExchangeRateInfoFilePath"]));
+                return ((string)(this["PaymentInfoFilePath"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\workspace\\Corporate\\payments\\paymentsresult.txt")]
-        public string PaymentInfoFilePath {
+        [global::System.Configuration.DefaultSettingValueAttribute("cesar.martinez@external.santander.us;yessica.ocampo@external.santander.us")]
+        public string EmailTo {
             get {
-                return ((string)(this["PaymentInfoFilePath"]));
+                return ((string)(this["EmailTo"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("CConfirming Payment Files and Exchage Rates  Files Loaded Successfully. ")]
+        public string EmailSuccSub {
+            get {
+                return ((string)(this["EmailSuccSub"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Confirming Payment Files  and Exchage Rates Loading Process Completed With Error." +
+            " ")]
+        public string EmailFailedSub {
+            get {
+                return ((string)(this["EmailFailedSub"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\workspace\\Corporate\\payments\\PaymentsATOct2019toSep2020.txt")]
+        public string EgiftInfoFilePath {
+            get {
+                return ((string)(this["EgiftInfoFilePath"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\workspace\\Corporate\\payments\\ExchangePaymentsATOct2019toSep2020.txt")]
+        public string ExchangeRateInfoFilePath {
+            get {
+                return ((string)(this["ExchangeRateInfoFilePath"]));
             }
         }
     }
