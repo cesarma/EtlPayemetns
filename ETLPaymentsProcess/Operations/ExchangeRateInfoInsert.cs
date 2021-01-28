@@ -3,7 +3,7 @@ using System;
 
 namespace ETLPaymentsProcess.Operations
 {
-    public class ExchangeRateInfoInsert : SqlBulkInsertOperation
+    public class ExchangeRateInfoInsert :  SqlBulkInsertOperation
     {
 
         /// <summary>
@@ -39,9 +39,10 @@ namespace ETLPaymentsProcess.Operations
             Schema["ftxousd"] = typeof(decimal?);
             Schema["fxtoeur"] = typeof(decimal?);            
             Schema["AsofDate"] = typeof(DateTime?);
-            
+           // Schema["Comments"] = typeof(string);
 
-	      
+
+
         }
 
 

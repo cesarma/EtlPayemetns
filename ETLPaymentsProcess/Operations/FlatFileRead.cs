@@ -1,4 +1,5 @@
-﻿using Rhino.Etl.Core;
+﻿using FileHelpers;
+using Rhino.Etl.Core;
 using Rhino.Etl.Core.Files;
 using Rhino.Etl.Core.Operations;
 using System;
@@ -6,7 +7,8 @@ using System.Collections.Generic;
 
 namespace ETLPaymentsProcess.Operations
 {
-    public class FlatFileRead<T> : AbstractOperation
+    [IgnoreEmptyLines]
+    public class FlatFileRead<T> :  AbstractOperation
     {
         public FlatFileRead(string filePath)
         {
@@ -28,6 +30,7 @@ namespace ETLPaymentsProcess.Operations
                 
             foreach (object obj in file)
             {
+                var retrnsomething =Row.FromObject(obj);
                  yield return Row.FromObject(obj);
             }
                
