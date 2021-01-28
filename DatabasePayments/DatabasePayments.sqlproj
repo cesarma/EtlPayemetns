@@ -77,4 +77,13 @@
   <ItemGroup>
     <None Include="Scripts\Post-Deployment\Payments.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Post-Deployment\PaymentsResult.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Post-Deployment\AddPaymentsExchange.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Post-Deployment\AddPayments.sql" />
+  </ItemGroup>
 </Project>
