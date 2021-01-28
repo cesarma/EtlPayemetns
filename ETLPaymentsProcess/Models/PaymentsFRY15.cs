@@ -1,40 +1,31 @@
-﻿using FileHelpers;
+﻿using ETLPaymentsProcess.Util;
+using FileHelpers;
 using System;
 
 namespace ETLPaymentsProcess.Models
 {
-    [DelimitedRecord("|")]
-     [IgnoreEmptyLines]
+    [IgnoreEmptyLines]
+    [DelimitedRecord("|")]     
     public class PaymentsFRY15
-    {
-       /// [FieldQuoted('"', QuoteMode.OptionalForBoth)]
-     //   public string amount;
-
-     ////   [FieldQuoted('"', QuoteMode.OptionalForBoth)]
-     //   public string startdate;
-
-      //  [FieldQuoted('"', QuoteMode.OptionalForBoth)]
-      //  public string enddate;
-
+    {    
         public string ReportId { get; set; }
        
         public string BoxId { get; set; }
      
         public string BranchID { get; set; }
 
-     
-        public Decimal Amount { get; set; }
+      //  [FieldNullValue(typeof(Decimal), "0")]
+        public Decimal Amount;
        
         public string GL { get; set; }
 
-
-        [FieldConverter(ConverterKind.Date, "yyyy-MM-dd")]
-        [FieldQuoted('"', QuoteMode.OptionalForBoth)]
+        [FieldConverter(typeof(ConvertDate))]
+        [FieldTrim(TrimMode.Both)]
         public DateTime? StartDate;
 
-
-        [FieldConverter(ConverterKind.Date, "yyyy-MM-dd")]
-        [FieldQuoted('"', QuoteMode.OptionalForBoth)]
+        
+        [FieldConverter(typeof(ConvertDate))]
+        [FieldTrim(TrimMode.Both)]
         public DateTime? EndDate;
         public string Comments { get; set; }
     }

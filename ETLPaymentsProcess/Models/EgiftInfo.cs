@@ -1,11 +1,11 @@
 ﻿using FileHelpers;
 using System;
-
+using ETLPaymentsProcess.Util;
 
 namespace ETLPaymentsProcess.Models
 {
-    [DelimitedRecord("|")]
     [IgnoreEmptyLines]
+    [DelimitedRecord("|")]   
     public class EgiftInfo
     {
         [FieldQuoted('"', QuoteMode.OptionalForBoth)]
@@ -23,11 +23,11 @@ namespace ETLPaymentsProcess.Models
         [FieldTrim(TrimMode.Both)]
         public String FUNDS_MOP;
 
-        [FieldConverter(ConverterKind.Date, "yyyy/MM/dd")]
-        [FieldQuoted('"', QuoteMode.OptionalForBoth)]
-        public DateTime? AsofDate;
-
-        
-    }
+        // [FieldConverter(ConverterKind.Date, "MM/dd/yyyy")]
+        [FieldConverter(typeof(ConvertDate))]
+        [FieldTrim(TrimMode.Both)]
+        //[FieldQuoted('"', QuoteMode.OptionalForBoth)]
+        public DateTime? AsofDate;        
+    } 
 
 }
