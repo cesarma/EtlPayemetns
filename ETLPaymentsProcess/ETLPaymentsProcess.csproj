@@ -92,13 +92,19 @@
     <Compile Include="Operations\ExchangeRateInfoInsert.cs" />
     <Compile Include="Operations\FlatFileRead.cs" />
     <Compile Include="Operations\FlatFileWrite.cs" />
+    <Compile Include="Operations\InsertPaymentsAuditTable.cs" />
     <Compile Include="Operations\PutData.cs" />
+    <Compile Include="Operations\InsertUpdateExchangeRates.cs" />
     <Compile Include="Operations\ReadBuildInfosConvention.cs" />
+    <Compile Include="Operations\TransfromUpdateorInsertPayments.cs" />
+    <Compile Include="Operations\TransfromUpdateorInsertExRatesTable.cs" />
     <Compile Include="Operations\TransformBlankStringToNull.cs" />
     <Compile Include="Operations\TransformCustomerInfo.cs" />
     <Compile Include="Operations\TransformDealInfo.cs" />
     <Compile Include="Pipelines\ExchangeRateInfoProcess.cs" />
     <Compile Include="Pipelines\EgiftInfoProcess.cs" />
+    <Compile Include="Pipelines\UpdateInsertExRatesTableProcess.cs" />
+    <Compile Include="Pipelines\UpdateInsertPaymentsTableProcess.cs" />
     <Compile Include="Pipelines\NamedEtlProcess.cs" />
     <Compile Include="Pipelines\RunBuildInfosProcess.cs" />
     <Compile Include="Program.cs" />
@@ -108,7 +114,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Util\ConvertDate.cs" />
     <Compile Include="Util\DatabaseUtil.cs" />
+    <Compile Include="Util\MoneyConverter.cs" />
     <Compile Include="Util\PipelineRunner.cs" />
     <Compile Include="Util\SendEmail.cs" />
   </ItemGroup>
